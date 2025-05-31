@@ -3,18 +3,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { Lock, Unlock, BarChart3, ClipboardCopy } from "lucide-react";
 import { Inputs } from "./inputsType";
 import { decrypt, encrypt } from "./caesarCipher";
-import { analyzeLetterFrequency } from "./frequencyAnalysis";
-
-interface LetterFrequency {
-  letter: string;
-  count: number;
-  percentage: number;
-}
-
-interface FrequencyAnalysisResult {
-  letters: LetterFrequency[];
-  totalLetters: number;
-}
+import { analyzeLetterFrequency, type FrequencyAnalysisResult } from "./frequencyAnalysis";
 
 const emptyInputs: Inputs = {
   key: 0,
